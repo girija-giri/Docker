@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "kuberdockerimage-2c1d"
+    labels:
+        app: "kuberdockerimage-2c1d"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "kuberdockerimage-2c1d"
